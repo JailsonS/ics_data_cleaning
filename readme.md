@@ -26,7 +26,3 @@ project
 ## Install requirements
 `pip install -r requirements.txt`
 
-### Run app
-`flask run`
-
-access localhost:5000/home

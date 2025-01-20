@@ -1,0 +1,202 @@
+{
+    "ovos_inteiros": [
+        {
+            "unit":"",
+            "description": "Regra para converter quantidade para KG onde o valor_un são baixos (0,10 - 1,2)",
+            "filter":"codigo == 41 and qt >= 1 and valor_un > 0.09 and valor_un < 1.2",
+            "unit_kg": "qt * 0.05"
+        },
+
+
+        
+        {
+            "unit":"UN",
+            "description": "Regra para converter quantidade para KG baseada nos valores unitários do qualtile Q1-Q2 (0.3 - 7.6)",
+            "filter":"codigo == 41 and qt > 0 and '30' not in item and quartile_range_valor_un == 'Q1-Q2 (0.3 - 7.6)' and un_adj == 'UN' and valor_un > 1",
+            "unit_kg": "12 * qt * 0.05"
+        },
+        {
+            "unit":"UN",
+            "description": "",
+            "filter":"codigo == 41 and qt > 0 and '30' in item and un_adj == 'UN' and valor_un > 1",
+            "unit_kg": "30 * qt * 0.05"
+        },
+        {
+            "unit":"UN",
+            "description": "",
+            "filter":"codigo == 41 and qt > 0 and '30' not in item and quartile_range_valor_un == 'Q3-Q4 (7.6 - 15.0)' and un_adj == 'UN' and valor_un > 1",
+            "unit_kg": "20 * qt * 0.05"
+        },
+        {
+            "unit":"UN",
+            "description": "",
+            "filter":"codigo == 41 and qt > 0 and quartile_range_valor_un == 'Q4 (> 15.0)' and un_adj == 'UN' and valor_un > 1",
+            "unit_kg": "30 * qt * 0.05"
+        },
+        {
+            "unit":"UN",
+            "description": "OUTLIER de valor_un - Regra para ajustar a unidade baseado no 4º quartil [Q4 (> 15.0)] de valores unitários",
+            "filter":"codigo == 41 and qt > 0 and is_outlier_valor_un == 1 and quartile_range_valor_un == 'Q4 (> 15.0)' and un_adj == 'UN'",
+            "unit_kg": "(valor / 0.5) * 0.05"
+        },
+        {
+            "unit":"UN",
+            "description": "OUTLIER de valor_un - Regra para ajustar a unidade baseado no 4º quartil [Q4 (> 15.0)] de valores unitários",
+            "filter":"codigo == 41 and qt == 0 and is_outlier_valor_un == 1 and quartile_range_valor_un == 'Q4 (> 15.0)' and un_adj == 'UN'",
+            "unit_kg": "30 * qt * 0.05"
+        },
+
+
+
+        {
+            "unit":"DZ",
+            "description": "OUTLIER de qt - Regras para 'qt' elevados",
+            "filter":"codigo == 41 and qt > 0 and '30' not in item and valor_un > 1 and valor_un < 14.5 and un_adj == 'DZ' and is_outlier_qt == 1 and quartile_range_qt == 'Q4 (> 228.0)'",
+            "unit_kg": "qt * 12 * 0.05"
+        },
+        {
+            "unit":"DZ",
+            "description": "OUTLIER de qt - Regras para 'qt' elevados",
+            "filter":"codigo == 41 and qt > 0 and valor_un > 14.5 and valor_un < 35 and un_adj == 'DZ' and is_outlier_qt == 1 and quartile_range_qt == 'Q4 (> 228.0)'",
+            "unit_kg": "qt * 30 * 0.05"
+        },
+        {
+            "unit":"DZ",
+            "description": "OUTLIER de valor_un - Regra para 'valor_un' extremamente elevados",
+            "filter":"codigo == 41 and qt > 0 and un_adj == 'DZ' and is_outlier_valor_un == 1 and quartile_range_valor_un == 'Q4 (> 9.9)' and valor_un > 30",
+            "unit_kg": "(valor / 0.5) * 0.05"
+        },
+        {
+            "unit":"DZ",
+            "description": "",
+            "filter":"codigo == 41 and qt > 0 and un_adj == 'DZ' and is_outlier_valor_un == 0 and is_outlier_qt == 0 and valor_un > 1 and quartile_range_valor_un == 'Q4 (> 9.9)'",
+            "unit_kg": "30 * qt * 0.05"
+        },
+        {
+            "unit":"DZ",
+            "description": "",
+            "filter":"codigo == 41 and qt > 0 and '30' not in item and un_adj == 'DZ' and is_outlier_valor_un == 0 and is_outlier_qt == 0 and valor_un > 1 and quartile_range_valor_un != 'Q4 (> 9.9)'",
+            "unit_kg": "12 * qt * 0.05"
+        },
+
+
+
+
+        {
+            "unit":"GRAMA",
+            "description": "",
+            "filter":"codigo == 41 and qt > 0 and un_adj == 'GRAMA' and is_outlier_valor_un == 0 and is_outlier_qt == 0 and valor_un > 1 and quartile_range_valor_un == 'Q3-Q4 (6.8 - 13.2)'",
+            "unit_kg": "30 * qt * 0.05"
+        },
+        {
+            "unit":"GRAMA",
+            "description": "",
+            "filter":"codigo == 41 and qt > 0 and '30' not in item and un_adj == 'GRAMA' and is_outlier_valor_un == 0 and is_outlier_qt == 0 and valor_un > 1 and quartile_range_valor_un == 'Q1-Q2 (0.5 - 6.8)'",
+            "unit_kg": "12 * qt * 0.05"
+        },
+        {
+            "unit":"GRAMA",
+            "description": "",
+            "filter":"codigo == 41 and qt > 0 and un_adj == 'GRAMA' and is_outlier_valor_un == 0 and is_outlier_qt == 0 and valor_un > 1 and quartile_range_valor_un == 'Q4 (> 13.2)'",
+            "unit_kg": "30 * qt * 0.05"
+        },
+
+
+
+
+
+        {
+            "unit":"KG",
+            "description": "",
+            "filter":"codigo == 41 and qt > 0 and un_adj == 'KG' and is_outlier_valor_un == 0 and is_outlier_qt == 0 and valor_un > 1 and quartile_range_valor_un == 'Q1-Q2 (2.4 - 12.0)'",
+            "unit_kg": "qt"
+        },
+        {
+            "unit":"KG",
+            "description": "",
+            "filter":"codigo == 41 and qt > 0 and un_adj == 'KG' and is_outlier_valor_un == 0 and is_outlier_qt == 0 and valor_un > 1 and quartile_range_valor_un == 'Q3-Q4 (12.0 - 21.7)'",
+            "unit_kg": "qt"
+        },
+        {
+            "unit":"KG",
+            "description": "",
+            "filter":"codigo == 41 and qt > 0 and un_adj == 'KG' and is_outlier_valor_un == 0 and is_outlier_qt == 0 and valor_un > 1 and quartile_range_valor_un == 'Q4 (> 21.7)'",
+            "unit_kg": "50 * qt * 0.05"
+        },
+
+
+
+        {
+            "unit":"BANDEJA",
+            "description": "OUTLIER de qt -",
+            "filter":"codigo == 41 and qt > 0 and '30' not in item and un_adj == 'BANDEJA' and is_outlier_qt == 1 and valor_un > 1 and valor_un <=14 and quartile_range_qt == 'Q4 (> 400.0)'",
+            "unit_kg": "12 * qt * 0.05"
+        },
+        {
+            "unit":"BANDEJA",
+            "description": "OUTLIER de qt -",
+            "filter":"codigo == 41 and qt > 0 and un_adj == 'BANDEJA' and is_outlier_qt == 1 and valor_un > 14 and valor_un <=28 and quartile_range_qt == 'Q4 (> 400.0)'",
+            "unit_kg": "30 * qt * 0.05"
+        },
+        {
+            "unit":"BANDEJA",
+            "description": "OUTLIER de qt -",
+            "filter":"codigo == 41 and qt > 0 and un_adj == 'BANDEJA' and is_outlier_qt == 1 and valor_un > 28 and quartile_range_qt == 'Q4 (> 400.0)'",
+            "unit_kg": "50 * qt * 0.05"
+        },
+        {
+            "unit":"BANDEJA",
+            "description": "OUTLIER de valor_un -",
+            "filter":"codigo == 41 and qt > 0 and un_adj == 'BANDEJA' and is_outlier_valor_un == 1 and is_outlier_qt == 0 and valor_un > 1 and quartile_range_valor_un == 'Q4 (> 22.1)'",
+            "unit_kg": "(valor / 0.45) * 0.05"
+        },
+        {
+            "unit":"BANDEJA",
+            "description": "",
+            "filter":"codigo == 41 and qt > 0 and un_adj == 'BANDEJA' and is_outlier_valor_un == 0 and is_outlier_qt == 0 and valor_un > 1 and quartile_range_valor_un == 'Q1 (<= 5.5)'",
+            "unit_kg": "12 * qt * 0.05"
+        },
+        {
+            "unit":"BANDEJA",
+            "description": "",
+            "filter":"codigo == 41 and qt > 0 and un_adj == 'BANDEJA' and is_outlier_valor_un == 0 and is_outlier_qt == 0 and valor_un > 1 and quartile_range_valor_un == 'Q1-Q2 (5.5 - 13.8)'",
+            "unit_kg": "30 * qt * 0.05"
+        },
+        {
+            "unit":"BANDEJA",
+            "description": "",
+            "filter":"codigo == 41 and qt > 0 and un_adj == 'BANDEJA' and is_outlier_valor_un == 0 and is_outlier_qt == 0 and valor_un > 1 and quartile_range_valor_un == 'Q3-Q4 (13.8 - 22.1)'",
+            "unit_kg": "30 * qt * 0.05"
+        },
+        {
+            "unit":"BANDEJA",
+            "description": "",
+            "filter":"codigo == 41 and qt > 0 and un_adj == 'BANDEJA' and is_outlier_valor_un == 0 and is_outlier_qt == 0 and valor_un > 1 and quartile_range_valor_un == 'Q4 (> 22.1)'",
+            "unit_kg": "50 * qt * 0.05"
+        },
+
+
+
+        {
+            "unit":"CX",
+            "description": "",
+            "filter":"codigo == 41 and '360' in item and qt > 0 and un_adj == 'CX' and is_outlier_valor_un == 0 and is_outlier_qt == 0 and valor_un > 1",
+            "unit_kg": "360 * qt * 0.05"
+        },
+        {
+            "unit":"CX",
+            "description": "",
+            "filter":"codigo == 41 and '30' in item and qt > 0 and un_adj == 'CX' and is_outlier_valor_un == 0 and is_outlier_qt == 0 and valor_un > 1",
+            "unit_kg": "30 * qt * 0.05"
+        },
+        {
+            "unit":"CX",
+            "description": "",
+            "filter":"codigo == 41 and quartile_range_valor_un == 'Q1-Q2 (6.0 - 88.0)' and '30' not in item and qt > 0 and un_adj == 'CX' and is_outlier_valor_un == 0 and is_outlier_qt == 0 and valor_un > 55",
+            "unit_kg": "(12 * 30) * qt * 0.05"
+        }
+
+    ]
+
+
+}

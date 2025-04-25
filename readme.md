@@ -30,5 +30,5 @@ project
 
 ### Note
 
-Follow the above instructions to run the pipeline of conversion dataset, make sure that all inputs are <br>
-available i.e. parquet file, dictionary of rules (rules.json)
+Follow the instructions above to run the dataset conversion pipeline. Ensure that all required inputs are available, <br>
+including the Parquet file and the rules dictionary (rules.json).

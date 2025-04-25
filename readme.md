@@ -13,6 +13,7 @@ project
 │   requirements.txt - requirements
 └───data
 |       dataset_carnes_v2.parquet
+|       rules_v8.json
 ```
 
 ### create virtual env
@@ -27,3 +28,7 @@ project
 ## Install requirements
 `pip install -r requirements.txt`
 
+### Note
+
+Follow the above instructions to run the pipeline of conversion dataset, make sure that all inputs are <br>
+available i.e. parquet file, dictionary of rules (rules.json)

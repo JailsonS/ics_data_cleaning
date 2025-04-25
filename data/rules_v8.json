@@ -1,0 +1,1276 @@
+{
+    "41": [
+
+        {
+            "id": "41_CX_001",
+            "unit": "cx",
+            "description": "",
+            "filter": "codigo == 41 and un_adj.str.contains('CX') and valor_un.between(3.49, 15)",
+            "unit_kg": "(qt * 12) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 12) * 0.05)"
+        },
+        {
+            "id": "41_CX_002",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 41 and un_adj.str.contains('CX') and valor_un.between(15, 30)",
+            "unit_kg": "(qt * 30) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 30) * 0.05)"         
+        },
+        {
+            "id": "41_DZ_1",
+            "unit": "DZ",
+            "description": "",
+            "filter": "codigo == 41 and un_adj == 'DZ' and qt >= 1 and valor_un == 0 and valor != 0 and (valor /qt) > 3.49 and (valor /qt) < 15",
+            "unit_kg": "(qt * 12) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 12) * 0.05)"
+        },
+        {
+            "id": "41_DZ_2",
+            "unit": "DZ",
+            "description": "",
+            "filter": "codigo == 41 and un_adj == 'DZ' and qt >= 1 and valor_un >= 1.2 and valor_un <= 3.49 and is_outlier_qt == 0",
+            "unit_kg": "(qt * 12) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 12) * 0.05)"
+        },
+        {
+            "id": "41_DZ_3",
+            "unit": "DZ",
+            "description": "",
+            "filter": "codigo == 41 and un_adj == 'DZ' and qt >= 1 and quartile_range_valor_un == 'Q1-Q2 (3.1 - 6.2)'",
+            "unit_kg": "(qt * 12) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 12) * 0.05)"
+        },
+        {
+            "id": "41_DZ_4",
+            "unit": "DZ",
+            "description": "",
+            "filter": "codigo == 41 and un_adj == 'DZ' and qt >= 1 and quartile_range_valor_un == 'Q3-Q4 (6.2 - 9.3)'",
+            "unit_kg": "(qt * 12) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 12) * 0.05)"
+        },
+        {
+            "id": "41_DZ_5",
+            "unit": "DZ",
+            "description": "",
+            "filter": "codigo == 41 and un_adj == 'DZ' and qt >= 1 and quartile_range_valor_un == 'Q4 (> 9.3)' and is_outlier_valor_un == 0",
+            "unit_kg": "(qt * 12) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 12) * 0.05)"
+        },
+        {
+            "id": "41_UN_1",
+            "unit": "UN",
+            "description": "",
+            "filter": "codigo == 41 and un_adj == 'UN' and qt >= 1 and quartile_range_valor_un == 'Q1-Q2 (0.0 - 7.0)' and valor_un > 3.49",
+            "unit_kg": "(qt * 12) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 12) * 0.05)"
+        },
+        {
+            "id": "41_UN_2",
+            "unit": "UN",
+            "description": "",
+            "filter": "codigo == 41 and un_adj == 'UN' and qt >= 1 and valor_un == 0 and valor != 0 and (valor /qt) > 3.49 and (valor /qt) < 25",
+            "unit_kg": "(qt * 12) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 12) * 0.05)"
+        },
+        {
+            "id": "41_UN_3",
+            "unit": "UN",
+            "description": "",
+            "filter": "codigo == 41 and un_adj == 'UN' and qt >= 1 and valor_un == 0 and valor != 0 and (valor /qt) > 0.1 and (valor /qt) < 1.2",
+            "unit_kg": "qt * 0.05",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.05)"
+        },
+        {
+            "id": "41_UN_4",
+            "unit": "UN",
+            "description": "",
+            "filter": "codigo == 41 and un_adj == 'UN' and qt >= 1 and quartile_range_valor_un == 'Q4 (> 14.0)' and is_outlier_valor_un == 0 and (~item.str.contains('30 UND') and ~item.str.contains('30UN') and ~item.str.contains('C/30') and ~item.str.contains('30X1'))",
+            "unit_kg": "(qt * 30) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 30) * 0.05)"
+        },
+        {
+            "id": "41_UN_5",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 41 and un_adj == 'UN' and valor_un.between(3.5, 25) and qt != 0",
+            "unit_kg": "(qt * 12) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 12) * 0.05)"
+        },
+        {
+            "id": "41_UN_6",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 41 and un_adj == 'UN' and valor_un.between(25, 35) and qt != 0",
+            "unit_kg": "(qt * 30) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 30) * 0.05)"
+        },
+        {
+            "id": "41_KG_1",
+            "unit": "KG",
+            "description": "Regra",
+            "filter": "codigo == 41 and un_adj == 'KG' and qt >= 1 and quartile_range_valor_un == 'Q3-Q4 (8.5 - 17.0)'",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "41_KG_2",
+            "unit": "KG",
+            "description": "Regra",
+            "filter": "codigo == 41 and un_adj == 'KG' and qt >= 1 and quartile_range_valor_un == 'Q1-Q2 (0.0 - 8.5)' and valor_un > 3.49",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "41_KG_3",
+            "unit": "KG",
+            "description": "Regra para converter quantidade para KG onde o valor_un são baixos (0,10 - 1,2)",
+            "filter": "codigo == 41 and un_adj == 'KG' and qt >= 1 and valor_un >= 1.2 and valor_un <= 3.49 and is_outlier_qt == 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "41_KG_4",
+            "unit": "KG",
+            "description": "Regra",
+            "filter": "codigo == 41 and un_adj == 'KG' and qt > 1 and valor_un == 0 and (valor /qt) > 3.49 and (valor /qt) < 12",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "41_ALL_1",
+            "unit": "",
+            "description": "Regra para converter quantidade para KG onde o valor_un são baixos (0,10 - 1,2)",
+            "filter": "codigo == 41 and qt >= 1 and valor_un > 0.09 and valor_un < 1.2",
+            "unit_kg": "qt * 0.05",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.05)"
+        },
+        {
+            "id": "41_ALL_2",
+            "unit": "",
+            "description": "Regra",
+            "filter": "codigo == 41 and qt >= 1 and valor_un == 0 and (valor /qt) <= 1.2 and valor != 0 and is_outlier_qt == 0",
+            "unit_kg": "qt * 0.05",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.05)"
+        },
+        {
+            "id": "41_ALL_3",
+            "unit": "",
+            "description": "Regra",
+            "filter": "codigo == 41 and qt >= 1 and valor_un == 0 and (valor /qt) > 1.2 and (valor /qt) <= 3.49 and valor != 0 and is_outlier_qt == 0",
+            "unit_kg": "qt * 0.3",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.3)"
+        },
+        {
+            "id": "41_ALL_4",
+            "unit": "",
+            "description": "Regra",
+            "filter": "codigo == 41 and qt >= 1 and valor_un != 0 and (valor /qt) > 1.2 and (valor /qt) <= 3.49 and valor != 0 and is_outlier_qt == 0",
+            "unit_kg": "qt * 0.3",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.3)"
+        },
+        {
+            "id": "41_ALL_5",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 41 and qt >= 1 and valor_un != 0 and is_outlier_valor_un == 0 and (item.str.contains('30 UND') or item.str.contains('30UN') or item.str.contains('C/30') or item.str.contains('30X1'))",
+            "unit_kg": "(qt * 30) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 30) * 0.05)"
+        },
+        {
+            "id": "41_ALL_6",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 41 and qt >= 1 and valor_un != 0 and is_outlier_valor_un == 0 and (item.str.contains('6 UND') or item.str.contains('6UN') or item.str.contains('6X1'))",
+            "unit_kg": "(qt * 6) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 6) * 0.05)"
+        },
+        {
+            "id": "41_ALL_7",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 41 and qt >= 1 and valor_un != 0 and is_outlier_valor_un == 0 and (item.str.contains('12 UND') or item.str.contains('12UN') or item.str.contains('12X1'))",
+            "unit_kg": "(qt * 12) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 12) * 0.05)"
+        },
+        {
+            "id": "41_ALL_8",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 41 and qt >= 1 and valor_un != 0 and is_outlier_valor_un == 0 and (item.str.contains('60UN') or item.str.contains('60X1') or item.str.contains('C60'))",
+            "unit_kg": "(qt * 60) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 60) * 0.05)"
+        },
+        {
+            "id": "41_BANDEJA_1",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 41 and un_adj == 'BANDEJA' and valor_un.between(3.5, 25) and qt != 0",
+            "unit_kg": "(qt * 12) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 12) * 0.05)"
+        },
+        {
+            "id": "41_BANDEJA_2",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 41 and un_adj == 'BANDEJA' and valor_un.between(25, 35) and qt != 0",
+            "unit_kg": "(qt * 30) * 0.05",
+            "version": "8",
+            "price_kg": "valor / ((qt * 30) * 0.05)"
+        }
+    ],
+    "11": [
+        {
+            "id": "11_CX_01",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 11 and un_adj.str.contains('CX') and valor_un.between(5, 50)",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "11_CX_02",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 11 and un_adj.str.contains('CX') and valor_un.between(5.1, 100)",
+            "unit_kg": "qt * 5",
+            "version": "8",
+            "price_kg": "valor / (qt * 5)"
+        },
+        {
+            "id": "11_CX_03",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 11 and un_adj.str.contains('CX') and valor_un.between(100.1, 500)",
+            "unit_kg": "qt * 10",
+            "version": "8",
+            "price_kg": "valor / (qt * 10)"
+        },
+        {
+            "id": "11_CX_04",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 11 and un_adj.str.contains('CX') and valor_un.between(500.1, 750)",
+            "unit_kg": "qt * 15",
+            "version": "8",
+            "price_kg": "valor / (qt * 15)"
+        },
+        {
+            "id": "11_CX_05",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 11 and un_adj.str.contains('CX') and valor_un.between(750.1, 1000)",
+            "unit_kg": "qt * 20",
+            "version": "8",
+            "price_kg": "valor / (qt * 20)"
+        },
+        {
+            "id": "11_CX_06",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 11 and un_adj.str.contains('CX') and valor_un.between(1000.1, 1500)",
+            "unit_kg": "qt * 30",
+            "version": "8",
+            "price_kg": "valor / (qt * 230)"
+        },
+        {
+            "id": "11_CX_07",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 11 and un_adj.str.contains('CX') and valor_un > 1500",
+            "unit_kg": "qt * 1000",
+            "version": "8",
+            "price_kg": "valor / (qt * 1000)"
+        },
+        {
+            "id": "11_KG_1",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 11 and un_adj == 'KG' and valor_un > 5 and quartile_range_valor_un == 'Q1-Q2 (0.0 - 14.4)'",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "11_KG_2",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 11 and un_adj == 'KG' and quartile_range_valor_un == 'Q3-Q4 (14.4 - 28.9)'",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "11_KG_3",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 11 and un_adj == 'KG' and valor_un < 80 and quartile_range_valor_un == 'Q4 (> 28.9)'",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "11_KG_4",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 11 and un_adj == 'KG' and valor_un == 0 and is_outlier_qt == 0 and is_outlier_valor_un == 0 and valor_un_ref != 0",
+            "unit_kg": "valor / valor_un_ref",
+            "version": "8",
+            "price_kg": "valor / (valor / valor_un_ref)"
+        },
+        {
+            "id": "11_KG_5",
+            "unit": "KG",
+            "description": "",
+            "filter": "(valor / qt) > 5 and (valor / qt) < 50 and codigo == 11 and un_adj == 'KG' and valor_un == 0 and is_outlier_qt == 0 and is_outlier_valor_un == 0 and valor_un_ref == 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "11_KG_6",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 11 and un_adj == 'KG' and abs((qt * valor_un) - valor) > 5 and valor_un != 0",
+            "unit_kg": "valor / median_price",
+            "version": "8",
+            "price_kg": "median_price"
+        },
+        {
+            "id": "11_KG_7",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 11 and un_adj == 'KG' and valor_un.between(0.1, 5) and valor != 0",
+            "unit_kg": "valor / median_price",
+            "version": "8",
+            "price_kg": "median_price"
+        },
+
+
+        {
+            "id": "11_CX_1",
+            "unit": "CX",
+            "description": "Trata os registros da un CAIXA e que possuem descrição no ITEM",
+            "filter": "codigo == 11 and un_adj.str.contains('CX') and item.str.contains('CAIXA|CX', regex=True, na=False) and not item.str.contains(r'(\\d+)X(\\d+) ?KG') and item.str.contains(r'(\\d+) ?KG')",
+            "unit_kg": "qt * item.str.extract(r'(\\d+) ?KG').astype('float')[0]",
+            "version": "8",
+            "price_kg": "valor / (qt * item.str.extract(r'(\\d+) ?KG').astype('float')[0])"
+        },
+        {
+            "id": "11_CX_2",
+            "unit": "CX",
+            "description": "Trata os registros da un CAIXA e que possuem descrição no ITEM",
+            "filter": "codigo == 11 and un_adj.str.contains('CX') and item.str.contains('CAIXA|CX', regex=True, na=False) and not item.str.contains(r'(\\d+)X(\\d+) ?KG') and not item.str.contains(r'(\\d+) ?KG') and valor_un.between(5, 50)",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "11_CX_3",
+            "unit": "CX",
+            "description": "Trata os registros da un CAIXA e que possuem descrição no ITEM",
+            "filter": "codigo == 11 and un_adj.str.contains('CX') and item.str.contains('CAIXA|CX', regex=True, na=False) and not item.str.contains(r'(\\d+)X(\\d+) ?KG') and not item.str.contains(r'(\\d+) ?KG') and valor_un.between(50.1, 100)",
+            "unit_kg": "qt * 5",
+            "version": "8",
+            "price_kg": "valor / (qt * 5)"
+        },
+        {
+            "id": "11_CX_4",
+            "unit": "CX",
+            "description": "Trata os registros da un CAIXA e que possuem descrição no ITEM",
+            "filter": "codigo == 11 and un_adj.str.contains('CX') and item.str.contains('CAIXA|CX', regex=True, na=False) and not item.str.contains(r'(\\d+)X(\\d+) ?KG') and not item.str.contains(r'(\\d+) ?KG') and valor_un.between(100.1, 500)",
+            "unit_kg": "qt * 10",
+            "version": "8",
+            "price_kg": "valor / (qt * 10)"
+        },
+
+
+
+        {
+            "id": "11_ALL_1",
+            "unit": "ALL",
+            "description": "",
+            "filter": "codigo == 11 and item.str.extract(r'(\\d+) ?KG').astype('float')[0] > 0 and not item.str.contains('CAIXA|IQF', regex=True, na=False)",
+            "unit_kg": "qt * item.str.extract(r'(\\d+) ?KG').astype('float')[0]",
+            "version": "8",
+            "price_kg": "valor / (qt * item.str.extract(r'(\\d+) ?KG').astype('float')[0])"
+        },
+        {
+            "id": "11_ALL_2",
+            "unit": "ALL",
+            "description": "",
+            "filter": "codigo == 11 and item.str.extract(r'(\\d+)X(\\d+) ?G').astype('float')[0] > 0",
+            "unit_kg": "qt * item.str.extract(r'(\\d+)X(\\d+) ?G').astype('float')[0] * (item.str.extract(r'(\\d+)X(\\d+) ?G').astype('float')[1] / 1000)",
+            "version": "8",
+            "price_kg": "valor / (qt * item.str.extract(r'(\\d+)X(\\d+) ?G').astype('float')[0] * (item.str.extract(r'(\\d+)X(\\d+) ?G').astype('float')[1] / 1000))"
+        },
+        {
+            "id": "11_ALL_3",
+            "unit": "ALL",
+            "description": "",
+            "filter": "codigo == 11 and item.str.extract(r'(\\d+)X(\\d+) ?KG').astype('float')[0] > 0",
+            "unit_kg": "qt * item.str.extract(r'(\\d+)X(\\d+) ?KG').astype('float')[0] * item.str.extract(r'(\\d+)X(\\d+) ?KG').astype('float')[1]",
+            "version": "8",
+            "price_kg": "valor / (qt * item.str.extract(r'(\\d+)X(\\d+) ?KG').astype('float')[0] * item.str.extract(r'(\\d+)X(\\d+) ?KG').astype('float')[1])"
+        }
+    ],
+    "14": [
+        {
+            "id": "14_CX_01",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 14 and un_adj.str.contains('CX') and valor_un.between(1, 30)",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "14_CX_02",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 14 and un_adj.str.contains('CX') and valor_un.between(30.1, 85)",
+            "unit_kg": "qt * 5",
+            "version": "8",
+            "price_kg": "valor / (qt * 5)"
+        },
+        {
+            "id": "14_CX_03",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 14 and un_adj.str.contains('CX') and valor_un.between(85.1, 250)",
+            "unit_kg": "qt * 10",
+            "version": "8",
+            "price_kg": "valor / (qt * 10)"
+        },
+        {
+            "id": "14_CX_04",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 14 and un_adj.str.contains('CX') and valor_un.between(250.1, 500)",
+            "unit_kg": "qt * 20",
+            "version": "8",
+            "price_kg": "valor / (qt * 20)"
+        },
+        {
+            "id": "14_CX_05",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 14 and un_adj.str.contains('CX') and valor_un.between(500.1, 1000)",
+            "unit_kg": "qt * 30",
+            "version": "8",
+            "price_kg": "valor / (qt * 30)"
+        },
+        {
+            "id": "14_CX_06",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 14 and un_adj.str.contains('CX') and valor_un > 1000",
+            "unit_kg": "qt * 1000",
+            "version": "8",
+            "price_kg": "valor / (qt * 1000)"
+        },
+        {
+            "id": "14_KG_1",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 14 and un_adj == 'KG' and valor_un == 0 and valor != 0",
+            "unit_kg": "valor / median_price",
+            "version": "8",
+            "price_kg": "median_price"
+        },
+        {
+            "id": "14_KG_2",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 14 and un_adj == 'KG' and qt >= 1 and valor != 0 and valor_un > 4 and quartile_range_valor_un == 'Q1-Q2 (0.0 - 7.7)'",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor_un"
+        },
+        {
+            "id": "14_KG_3",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 14 and un_adj == 'KG' and qt >= 1 and valor != 0 and quartile_range_valor_un == 'Q3-Q4 (7.7 - 15.3)'",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor_un"
+        },
+        {
+            "id": "14_KG_4",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 14 and un_adj == 'KG' and qt >= 1 and valor != 0 and quartile_range_valor_un == 'Q4 (> 15.3)' and is_outlier_valor_un == 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor_un"
+        },
+
+        {
+            "id": "14_CX_1",
+            "unit": "CX",
+            "description": "Não é pacote composto e apresenta descrição de KG no item",
+            "filter": "codigo == 14 and un_adj.str.contains('CX', na=False) and not item.str.contains(r'(\\d+)X') and (valor / (item.str.extract(r'(\\d+) ?KG').astype('float')[0] * qt)) > 5",
+            "unit_kg": "item.str.extract(r'(\\d+) ?KG').astype('float')[0] * qt",
+            "version": "8",
+            "price_kg": "valor / (item.str.extract(r'(\\d+) ?KG').astype('float')[0] * qt)"
+        },
+            {
+            "id": "14_CX_2",
+            "unit": "CX",
+            "description": "Não é pacote composto e NÃO apresenta descrição de KG no item",
+            "filter": "codigo == 14 and un_adj.str.contains('CX', na=False) and not item.str.contains(r'(\\d+)X(\\d+)') and not item.str.contains(r'(\\d+) ?KG') and (valor/qt) < 30",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        }
+    ],
+    "22":[
+        {
+            "id": "22_KG_1",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 22 and un_adj == 'KG' and valor_un == 0 and valor != 0",
+            "unit_kg": "valor / median_price",
+            "version": "8",
+            "price_kg": "median_price"
+        },
+        {
+            "id": "22_KG_2",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 22 and un_adj == 'KG' and valor_un > 3 and quartile_range_valor_un == 'Q1-Q2 (0.0 - 9.2)'",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor_un"
+        },
+        {
+            "id": "22_KG_3",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 22 and un_adj == 'KG' and quartile_range_valor_un == 'Q3-Q4 (9.2 - 18.4)'",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor_un"
+        },
+        {
+            "id": "22_KG_4",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 22 and un_adj == 'KG' and quartile_range_valor_un == 'Q4 (> 18.4)' and is_outlier_valor_un == 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor_un"
+        }
+    ],
+    "12":[
+        {
+            "id": "12_CX_1",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 12 and un_adj.str.contains('CX') and valor_un.between(1, 30)",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "12_CX_2",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 12 and un_adj.str.contains('CX') and valor_un.between(30.1, 150)",
+            "unit_kg": "qt * 5",
+            "version": "8",
+            "price_kg": "valor / (qt * 5)"
+        },
+        {
+            "id": "12_CX_3",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 12 and un_adj.str.contains('CX') and valor_un.between(150.1, 300)",
+            "unit_kg": "qt * 10",
+            "version": "8",
+            "price_kg": "valor / (qt * 10)"
+        },
+        {
+            "id": "12_CX_4",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 12 and un_adj.str.contains('CX') and valor_un.between(300.1, 600)",
+            "unit_kg": "qt * 20",
+            "version": "8",
+            "price_kg": "valor / (qt * 20)"
+        },
+        {
+            "id": "12_CX_5",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 12 and un_adj.str.contains('CX') and valor_un.between(600.1, 2000)",
+            "unit_kg": "qt * 30",
+            "version": "8",
+            "price_kg": "valor / (qt * 30)"
+        },
+        {
+            "id": "12_CX_6",
+            "unit": "CX",
+            "description": "",
+            "filter": "codigo == 12 and un_adj.str.contains('CX') and valor_un > 2000",
+            "unit_kg": "qt * 1000",
+            "version": "8",
+            "price_kg": "valor / (qt * 1000)"
+        },
+        {
+            "id": "12_KG_1",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 12 and un_adj == 'KG' and valor_un == 0 and valor != 0",
+            "unit_kg": "valor / median_price",
+            "version": "8",
+            "price_kg": "median_price"
+        },
+        {
+            "id": "12_KG_2",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 12 and un_adj == 'KG' and valor_un > 7 and quartile_range_valor_un == 'Q1-Q2 (0.0 - 10.6)' and valor != 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor_un"
+        },
+        {
+            "id": "12_KG_3",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 12 and un_adj == 'KG' and quartile_range_valor_un == 'Q3-Q4 (10.6 - 21.3)' and valor != 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor_un"
+        },
+        {
+            "id": "12_KG_3",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 12 and un_adj == 'KG' and quartile_range_valor_un == 'Q4 (> 21.3)' and valor != 0 and is_outlier_valor_un == 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor_un"
+        }
+    ],
+    "15": [
+        {
+            "id": "15_KG_1",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 15 and un_adj == 'KG' and valor_un == 0 and valor != 0",
+            "unit_kg": "valor / median_price",
+            "version": "8",
+            "price_kg": "median_price"
+        },
+        {
+            "id": "15_KG_2",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 15 and un_adj == 'KG' and valor_un > 7 and quartile_range_valor_un == 'Q1-Q2 (0.0 - 18.4)' and valor != 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor_un"
+        },
+        {
+            "id": "15_KG_3",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 15 and un_adj == 'KG' and quartile_range_valor_un == 'Q3-Q4 (18.4 - 36.9)' and valor != 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor_un"
+        },
+        {
+            "id": "15_KG_3",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 15 and un_adj == 'KG' and quartile_range_valor_un == 'Q4 (> 36.9)' and valor != 0 and is_outlier_valor_un == 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor_un"
+        },
+        {
+            "id": "15_ALL_1",
+            "unit": "ALL",
+            "description": "",
+            "filter": "codigo == 15 and (item.str.contains('500G') or item.str.contains('500 G'))",
+            "unit_kg": "qt * 0.5",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.5)"
+        },
+        {
+            "id": "15_ALL_2",
+            "unit": "ALL",
+            "description": "",
+            "filter": "codigo == 15 and (item.str.contains('250G') or item.str.contains('250 G'))",
+            "unit_kg": "qt * 0.250",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.250)"
+        },
+        {
+            "id": "15_ALL_3",
+            "unit": "ALL",
+            "description": "",
+            "filter": "codigo == 15 and item.str.contains('60X500G')",
+            "unit_kg": "qt * (60 * 0.5)",
+            "version": "8",
+            "price_kg": "valor / (qt * (60 * 0.5))"
+        }
+    ],
+    "51": [
+        {
+            "id": "51_ALL_0",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 51 and valor_un.between(2.3, 5) and qt != 0",
+            "unit_kg": "qt * 0.1",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.1)"
+        },
+        {
+            "id": "51_ALL_00",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 51 and valor_un.between(5, 7) and qt != 0",
+            "unit_kg": "qt * 0.2",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.2)"
+        },
+        {
+            "id": "51_ALL_000",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 51 and valor_un.between(7, 20) and qt != 0",
+            "unit_kg": "qt * 0.4",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.4)"
+        },
+        {
+            "id": "51_ALL_0000",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 51 and valor_un.between(20, 40) and qt != 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "51_ALL_00000",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 51 and valor_un.between(14, 34) and qt != 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "51_KG_1",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 51 and un_adj == 'KG' and valor_un == 0 and valor != 0",
+            "unit_kg": "valor / median_price",
+            "version": "8",
+            "price_kg": "median_price"
+        },
+        {
+            "id": "51_KG_2",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 51 and un_adj == 'KG' and valor_un.between(2.3, 5)",
+            "unit_kg": "qt * 0.1",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.1)"
+        },
+        {
+            "id": "51_KG_3",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 51 and un_adj == 'KG' and valor_un.between(5, 7)",
+            "unit_kg": "qt * 0.2",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.2)"
+        },
+        {
+            "id": "51_KG_4",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 51 and un_adj == 'KG' and valor_un.between(7, 14)",
+            "unit_kg": "qt * 0.4",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.4)"
+        },
+        {
+            "id": "51_KG_5",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 51 and un_adj == 'KG' and valor_un.between(14, 34)",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "51_KG_6",
+            "unit": "UN",
+            "description": "",
+            "filter": "codigo == 51 and un_adj == 'UN' and valor_un.between(2, 9)",
+            "unit_kg": "qt * 0.2",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.2)"
+        },
+        {
+            "id": "51_KG_8",
+            "unit": "GRAMA",
+            "description": "",
+            "filter": "codigo == 51 and un_adj == 'GRAMA' and valor_un.between(1.9, 3)",
+            "unit_kg": "qt * 0.1",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.1)"
+        },
+        {
+            "id": "51_KG_9",
+            "unit": "GRAMA",
+            "description": "",
+            "filter": "codigo == 51 and un_adj == 'GRAMA' and valor_un == 0 and (valor/qt) > 3 and (valor/qt) < 5",
+            "unit_kg": "qt * 0.1",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.1)"
+        },
+        {
+            "id": "51_GRAMA_10",
+            "unit": "GRAMA",
+            "description": "",
+            "filter": "codigo == 51 and un_adj == 'GRAMA' and qt > valor",
+            "unit_kg": "qt / 1000",
+            "version": "8",
+            "price_kg": "valor / (qt /1000)"
+        },
+
+        {
+            "id": "51_KG_10",
+            "unit": "PACOTE",
+            "description": "",
+            "filter": "codigo == 51 and un_adj == 'PACOTE' and valor_un == 0 and (valor/qt) > 3 and (valor/qt) < 5",
+            "unit_kg": "qt * 0.1",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.1)"
+        },
+        {
+            "id": "51_KG_11",
+            "unit": "PACOTE",
+            "description": "",
+            "filter": "codigo == 51 and un_adj == 'PACOTE' and valor_un.between(3, 7)",
+            "unit_kg": "qt * 0.1",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.1)"
+        },
+
+        {
+            "id": "51_ALL_5",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 51 and item.str.contains('20X500')",
+            "unit_kg": "qt * (20 * 0.5)",
+            "version": "8",
+            "price_kg": "valor / (qt * (20 * 0.5))"
+        },
+        {
+            "id": "51_ALL_55",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 51 and rule_apply == 1 and item.str.extract(r'(\\d+(?:\\.\\d+)?)KG').astype('float')[0] > 1 and qt != 0",
+            "unit_kg": "qt * item.str.extract(r'(\\d+(?:\\.\\d+)?)KG').astype('float')[0]",
+            "version": "8",
+            "price_kg": "valor / (qt * item.str.extract(r'(\\d+(?:\\.\\d+)?)KG').astype('float')[0])"
+        },
+        {
+            "id": "51_ALL_33",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 51 and item.str.extract(r'(\\d+(?:\\.\\d+)?)G').astype('float')[0] > 1 and qt != 0 and item.str.extract(r'(\\d+(?:\\.\\d+)?)UND').astype('float')[0] > 1",
+            "unit_kg": "qt * (item.str.extract(r'(\\d+(?:\\.\\d+)?)G').astype('float')[0] / 1000 * item.str.extract(r'(\\d+(?:\\.\\d+)?)UND').astype('float')[0])",
+            "version": "8",
+            "price_kg": "valor / (qt * (item.str.extract(r'(\\d+(?:\\.\\d+)?)G').astype('float')[0] / 1000 * item.str.extract(r'(\\d+(?:\\.\\d+)?)UND').astype('float')[0]))"
+        },
+        {
+            "id": "51_ALL_44",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 51 and item.str.extract(r'(\\d+(?:\\.\\d+)?)G').astype('float')[0] > 1 and qt != 0 and item.str.extract(r'(\\d+(?:\\.\\d+)?) UND').astype('float')[0] > 1",
+            "unit_kg": "qt * (item.str.extract(r'(\\d+(?:\\.\\d+)?)G').astype('float')[0] / 1000 * item.str.extract(r'(\\d+(?:\\.\\d+)?) UND').astype('float')[0])",
+            "version": "8",
+            "price_kg": "valor / (qt * (item.str.extract(r'(\\d+(?:\\.\\d+)?)G').astype('float')[0] / 1000 * item.str.extract(r'(\\d+(?:\\.\\d+)?) UND').astype('float')[0]))"
+        },
+
+
+
+
+
+        {
+            "id": "51_ALL_6",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 51 and item.str.extract(r'(\\d+(?:\\.\\d+)?)G').astype('float')[0] > 1 and valor != 0",
+            "unit_kg": "qt * (item.str.extract(r'(\\d+(?:\\.\\d+)?)G').astype('float')[0] / 1000)",
+            "version": "8",
+            "price_kg": "valor / (qt * (item.str.extract(r'(\\d+(?:\\.\\d+)?)G').astype('float')[0] / 1000))"
+        },
+        {
+            "id": "51_ALL_7",
+            "unit": "",
+            "description": "Regra para pacotes simples com gramas (ex: 24X420G)",
+            "filter": "codigo == 51 and item.str.contains(r'\\d+X\\d+G')",
+            "unit_kg": "qt * (item.str.extract(r'(\\d+)X(\\d+)G').astype('float')[0]) * (item.str.extract(r'(\\d+)X(\\d+)G').astype('float')[1] / 1000)",
+            "version": "8",
+            "price_kg": "valor / (qt * (item.str.extract(r'(\\d+)X(\\d+)G').astype('float')[0]) * (item.str.extract(r'(\\d+)X(\\d+)G').astype('float')[1] / 1000))"
+        },
+        {
+            "id": "51_ALL_8",
+            "unit": "",
+            "description": "Regra para descrições multi-pacote com gramas (ex: 2X40X50G)",
+            "filter": "codigo == 51 and item.str.contains(r'\\d+X\\d+X\\d+G')",
+            "unit_kg": "qt * (item.str.extract(r'(\\d+)X(\\d+)X(\\d+)G').astype('float')[0]) * (item.str.extract(r'(\\d+)X(\\d+)X(\\d+)G').astype('float')[1]) * (item.str.extract(r'(\\d+)X(\\d+)X(\\d+)G').astype('float')[2] / 1000)",
+            "version": "8",
+            "price_kg": "valor / (qt * (item.str.extract(r'(\\d+)X(\\d+)X(\\d+)G').astype('float')[0]) * (item.str.extract(r'(\\d+)X(\\d+)X(\\d+)G').astype('float')[1]) * (item.str.extract(r'(\\d+)X(\\d+)X(\\d+)G').astype('float')[2] / 1000))"
+        }
+    
+    ],
+    "33": [
+        {
+            "id": "33_ALL_1",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 33 and valor_un == 0 and valor != 0 and (valor/qt) < 55 and (valor/qt) > 6",
+            "unit_kg": "valor / median_price",
+            "version": "8",
+            "price_kg": "median_price"
+        },
+        {
+            "id": "33_KG_2",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 33 and un_adj == 'KG' and valor_un.between(6, 49) and valor != 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "33_KG_3",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 33 and un_adj == 'KG' and valor_un > 49 and is_outlier_valor_un == 0 and valor != 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "33_ALL_2",
+            "unit": "",
+            "description": "Esta regra assume que houve erro de digitação na quantidade",
+            "filter": "codigo == 33 and valor/qt > 3 and valor/qt <= 4 and (valor / (qt / 10)) > 15 and (valor / (qt / 10)) <= 100",
+            "unit_kg": "qt / 10",
+            "version": "8",
+            "price_kg": "valor / (qt / 10)"
+        },
+        {
+            "id": "33_ALL_3",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 33 and rule_apply == 0 and ~item.str.contains('500G') and valor/qt > 6 and valor/qt < 60",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "33_ALL_4",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 33 and rule_apply == 0 and item.str.contains('500G')",
+            "unit_kg": "qt * 0.5",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.5)"
+        },
+        {
+            "id": "33_ALL_5",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 33 and valor_un < 2",
+            "unit_kg": "valor / median_price",
+            "version": "8",
+            "price_kg": "median_price"
+        }
+    ],
+    "31": [
+        {
+            "id": "31_KG_1",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 31 and valor_un == 0 and valor != 0 and (valor/qt) < 55 and (valor/qt) > 2.7",
+            "unit_kg": "valor / median_price",
+            "version": "8",
+            "price_kg": "median_price"
+        },
+        {
+            "id": "31_KG_2",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 31 and valor_un.between(2.7, 18) and valor != 0 ",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "31_KG_3",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 31 and valor_un.between(18, 60) and valor != 0 ",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        }
+    ],
+    "32": [
+        {
+            "id": "32_ALL_1",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 32 and valor_un == 0 and valor != 0",
+            "unit_kg": "valor / median_price",
+            "version": "8",
+            "price_kg": "median_price"
+        },
+        {
+            "id": "32_ALL_2",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 32 and valor_un.between(1.2, 4) and valor != 0 and qt >= 1",
+            "unit_kg": "qt * 0.125",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.125)"  
+        },
+        {
+            "id": "32_ALL_3",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 32 and valor_un.between(4, 17) and valor != 0 and qt >= 1",
+            "unit_kg": "qt * 0.250",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.250)"  
+        },
+        {
+            "id": "32_ALL_4",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 32 and valor_un.between(17, 55) and valor != 0 and qt >= 1",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"  
+        },
+        {
+            "id": "32_KG_1",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 32 and un_adj == 'KG' and valor_un.between(7, 62) and valor != 0 and qt >= 1",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"      
+        },
+        {
+            "id": "32_UN_1",
+            "unit": "UN",
+            "description": "",
+            "filter": "codigo == 32 and un_adj == 'UN' and item.str.contains('125G') and valor_un.between(1.5, 15)",
+            "unit_kg": "qt * 0.125",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.125)"      
+        },
+        {
+            "id": "32_UN_2",
+            "unit": "UN",
+            "description": "",
+            "filter": "codigo == 32 and un_adj == 'UN' and item.str.contains('250G') and valor_un.between(3, 30)",
+            "unit_kg": "qt * 0.250",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.250)"      
+        },
+        {
+            "id": "32_GRAMA_1",
+            "unit": "GRAMA",
+            "description": "",
+            "filter": "codigo == 32 and un_adj == 'GRAMA' and valor_un.between(2.5, 7.5)",
+            "unit_kg": "qt * 0.125",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.125)"
+        },
+        {
+            "id": "32_LATA_1",
+            "unit": "LATA",
+            "description": "",
+            "filter": "codigo == 32 and un_adj == 'LATA' and valor_un.between(2.5, 7.5)",
+            "unit_kg": "qt * 0.125",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.125)"
+        },
+        {
+            "id": "32_KG_2",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 32 and item.str.contains('6 X 1 KG')",
+            "unit_kg": "qt * 6",
+            "version": "8",
+            "price_kg": "valor / (qt * 6)"
+        },
+        {
+            "id": "32_KG_3",
+            "unit": "KG",
+            "description": "Nesta regra 20 representa o preço médio por kg",
+            "filter": "codigo == 32 and ~item.str.contains('6 X 1 KG') and valor_un.between(90, 160)",
+            "unit_kg": "qt * (valor_un / 20)",
+            "version": "8",
+            "price_kg": "valor / (qt * (valor_un / 20))"
+        }
+    ],
+    "16": [
+        {
+            "id": "16_KG_1",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 16 and un_adj == 'KG' and valor_un == 0 and valor != 0",
+            "unit_kg": "valor / median_price",
+            "version": "8",
+            "price_kg": "median_price"
+        },
+        {
+            "id": "16_KG_2",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 16 and un_adj == 'KG' and valor_un.between(4, 46) and valor != 0 and qt != 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        }
+    ],
+    "21": [
+        {
+            "id": "21_ALL_1",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 21 and valor_un == 0 and valor != 0",
+            "unit_kg": "valor / median_price",
+            "version": "8",
+            "price_kg": "median_price"
+        },
+        {
+            "id": "21_KG_1",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 21 and un_adj == 'KG' and valor_un.between(7, 67) and valor != 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        },
+        {
+            "id": "21_ALL_2",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 21 and valor_un.between(3, 7) and valor != 0",
+            "unit_kg": "qt * 0.420",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.420)"
+        },
+        {
+            "id": "21_ALL_3",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 21 and un_adj != 'KG' and valor_un.between(7.1, 20) and valor != 0",
+            "unit_kg": "qt * 0.830",
+            "version": "8",
+            "price_kg": "valor / (qt * 0.830)"
+        },
+        {
+            "id": "21_ALL_4",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 21 and valor_un.between(1, 3) and valor != 0",
+            "unit_kg": "qt / 0.350",
+            "version": "8",
+            "price_kg": "valor / (qt / 0.350)"
+        },
+        {
+            "id": "21_ALL_5",
+            "unit": "",
+            "description": "",
+            "filter": "codigo == 21 and item.str.extract(r'(\\d+(?:\\.\\d+)?)G').astype('float')[0] > 1 and valor != 0",
+            "unit_kg": "qt * (item.str.extract(r'(\\d+(?:\\.\\d+)?)G').astype('float')[0] / 1000)",
+            "version": "8",
+            "price_kg": "valor / (qt * (item.str.extract(r'(\\d+(?:\\.\\d+)?)G').astype('float')[0] / 1000))"
+        },
+        {
+            "id": "21_ALL_6",
+            "unit": "",
+            "description": "Regra para pacotes simples com gramas (ex: 24X420G)",
+            "filter": "codigo == 21 and item.str.contains(r'\\d+X\\d+G')",
+            "unit_kg": "qt * (item.str.extract(r'(\\d+)X(\\d+)G').astype('float')[0]) * (item.str.extract(r'(\\d+)X(\\d+)G').astype('float')[1] / 1000)",
+            "version": "8",
+            "price_kg": "valor / (qt * (item.str.extract(r'(\\d+)X(\\d+)G').astype('float')[0]) * (item.str.extract(r'(\\d+)X(\\d+)G').astype('float')[1] / 1000))"
+        },
+        {
+            "id": "21_ALL_7",
+            "unit": "",
+            "description": "Regra para descrições multi-pacote com gramas (ex: 2X40X50G)",
+            "filter": "codigo == 21 and item.str.contains(r'\\d+X\\d+X\\d+G')",
+            "unit_kg": "qt * (item.str.extract(r'(\\d+)X(\\d+)X(\\d+)G').astype('float')[0]) * (item.str.extract(r'(\\d+)X(\\d+)X(\\d+)G').astype('float')[1]) * (item.str.extract(r'(\\d+)X(\\d+)X(\\d+)G').astype('float')[2] / 1000)",
+            "version": "8",
+            "price_kg": "valor / (qt * (item.str.extract(r'(\\d+)X(\\d+)X(\\d+)G').astype('float')[0]) * (item.str.extract(r'(\\d+)X(\\d+)X(\\d+)G').astype('float')[1]) * (item.str.extract(r'(\\d+)X(\\d+)X(\\d+)G').astype('float')[2] / 1000))"
+        }
+    ],
+    "13": [
+        {
+            "id": "13_KG_1",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 13 and un_adj == 'KG' and valor_un == 0 and valor != 0",
+            "unit_kg": "valor / median_price",
+            "version": "8",
+            "price_kg": "median_price"
+        },
+        {
+            "id": "13_KG_2",
+            "unit": "KG",
+            "description": "",
+            "filter": "codigo == 13 and un_adj == 'KG' and valor_un.between(7, 45) and valor != 0",
+            "unit_kg": "qt",
+            "version": "8",
+            "price_kg": "valor / qt"
+        }
+    ]
+}

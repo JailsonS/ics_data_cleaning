@@ -8,7 +8,8 @@ This is a short script to clean beef dataset
 ```
 project
 │   readme.md
-|   01_clean_dataset_01.ipynb
+|   01_std_units.ipynb
+|   ...
 │   requirements.txt - requirements
 └───data
 |       dataset_carnes_v2.parquet

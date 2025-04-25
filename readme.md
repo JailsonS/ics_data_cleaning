@@ -1,4 +1,4 @@
-This is a short script to clean beef dataset
+This repository contains scripts for inspecting and standardizing count values across different units.
 
 ### Requirements
 
